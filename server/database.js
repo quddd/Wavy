@@ -1,9 +1,6 @@
 const mongoose = require("mongoose");
 
-const username = "qudustechbro";
-const password = "qudusissowavy2022";
-
-const DB = `mongodb+srv://${username}:${password}@wavy.gi3kdmv.mongodb.net/WavyNews?retryWrites=true&w=majority`;
+const DB = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@wavy.gi3kdmv.mongodb.net/WavyNews?retryWrites=true&w=majority`;
 
 const DBConnection = async () => {
   try {

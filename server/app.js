@@ -3,7 +3,8 @@ const express = require("express");
 const logger = require("morgan");
 const cronJob = require("./cron/fetchNews");
 
-const indexRouter = require("./routes/index");
+const newsRouter = require("./routes/news");
+const userRouter = require("./routes/user");
 
 const DBConnection = require("./database");
 
@@ -14,7 +15,8 @@ cronJob();
 app.use(logger("dev"));
 
 //index route
-app.use("/api", indexRouter);
+app.use("/api", newsRouter);
+app.use("/api/users", userRouter);
 
 // Error handling for invalid routes
 app.use(function(req, res, next) {

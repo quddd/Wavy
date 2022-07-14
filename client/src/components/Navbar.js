@@ -6,9 +6,9 @@ function NavbarComponent() {
   return (
     <Navbar bg='light' expand='lg'>
       <Container>
-        <Link to='/' className='react-dom-link'>
-          <Navbar.Brand>Wavy News</Navbar.Brand>
-        </Link>
+        
+          <Navbar.Brand href="/">Wavy News</Navbar.Brand>
+        
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='me-auto'>

@@ -10,7 +10,7 @@ const ObjectId = require("mongoose").Types.ObjectId;
 exports.getTopNews = async (req, res, next) => {
     try {
         const latestNews = await News.find()
-            .sort({time: -1})
+            .sort({hn_id: -1})
             .limit(10)
         res.status(200).send(latestNews);
     } catch (err) {
@@ -18,6 +18,10 @@ exports.getTopNews = async (req, res, next) => {
     }
 }
 
+/**
+ * GET
+ * returns a story and its comments
+ */
 exports.getNewsArticle = async (req, res, next) => {
    try {
     if (!ObjectId.isValid(req.params.id)) {

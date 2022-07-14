@@ -15,9 +15,9 @@ function CommentsComponent(props){
                             <div className="comment-author">{comment.by}</div>
                         </div>
                         <div className="comment-time">{new Date(comment.time).toLocaleString("en-US")}</div>
-                        <div className="text" >
+                        {comment.text && <div className="text" >
                             <p>{he.decode(comment.text).replace(/(<([^>]+)>)/gi, "")}</p>
-                        </div>
+                        </div>}
                         
                         {comment.kids.length >= 1 && <div className="comment-replies">View {comment.kids.length} replies </div>}
                     </div>
