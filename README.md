@@ -1,4 +1,3 @@
-# Hacker News Top Stories
 ### STACK : MERN
 ### Install dependencies
 navigate to client and server folders and run the following command in each folder
