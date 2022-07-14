@@ -37,7 +37,7 @@ function TopNews(){
     }, [url]);
 
     if (newsList.error){
-        content = <p>Error getting fetching top news :(</p>
+        content = <h3>Error getting fetching top news :(</h3>
     }
 
     if (newsList.loading){

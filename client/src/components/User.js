@@ -39,7 +39,7 @@ function UserComponent(){
     }, [url]);
 
     if (user.error){
-        content = <p>Error Getting User Info:( </p>
+        content = <h3>Error Getting User Info:( </h3>
     }
     if (user.loading){
         content = <Spinner animation="border" variant="primary" />

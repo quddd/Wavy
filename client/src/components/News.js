@@ -37,7 +37,9 @@ function NewsComponent(){
     }, [url]);
 
     if (newsArticle.error){
-        content = <p>Error Getting News Article :( </p>
+        content = 
+            <h3>Error Getting News Article :( </h3>
+
     }
     if (newsArticle.loading){
         content = <Spinner animation="border" variant="primary" />
